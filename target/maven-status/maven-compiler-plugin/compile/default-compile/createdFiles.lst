@@ -1,8 +1,0 @@
-com\AU\Exam\App\configuration\AppConfig.class
-com\AU\Exam\App\Model\Paper.class
-com\AU\Exam\App\DTO\PaperDTO.class
-com\AU\Exam\App\Service\CloudinaryService.class
-com\AU\Exam\App\Controller\PaperController.class
-com\AU\Exam\App\Service\PaperService.class
-com\AU\Exam\App\Repository\PaperRepository.class
-com\AU\Exam\AuExamApp.class
