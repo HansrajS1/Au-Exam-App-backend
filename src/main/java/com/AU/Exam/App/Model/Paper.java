@@ -12,10 +12,12 @@ public class Paper {
     private Long id;
 
     private String college;
+    private String UserEmail;
     private String course;
     private int semester;
     private String subject;
     private String description;
     private String fileUrl;
     private String previewImageUrl;
+
 }
