@@ -1,6 +1,6 @@
 #  AU Exam App Backend
 
-This is the backend service for the AU Exam App, built with **Spring Boot**. It provides RESTful APIs for managing academic paper submissions, including metadata, file references, and preview images. Designed to integrate seamlessly with the React Native frontend and Appwrite authentication.
+This is the backend service for the [AU Exam App](https://github.com/HansrajS1/Au-Exam-App), built with **Spring Boot**. It provides RESTful APIs for managing academic paper submissions, including metadata, file references, and preview images. Designed to integrate seamlessly with the React Native frontend and Appwrite authentication.
 
 ---
 
