@@ -90,13 +90,16 @@ Example JSON payload:
 
 ```json
 {
-  "university": "Alliance University",
-  "subject": "Physics",
-  "topic": "Quantum Mechanics",
-  "grade": "B.Tech CSE",
-  "fileUrl": "https://cdn.appwrite.io/files/xyz.pdf",
-  "previewImageUrl": "https://cdn.appwrite.io/files/preview.jpg"
-}
+ "id": 2,
+ "college": "Alliance University",
+ "course": "Btech",
+ "semester": 5,
+ "subject": "Physics ",
+ "description": "Question ",
+ "fileUrl": "https://res.cloudinary.com/dsfzvqzit/image/upload/v175753/wbioiv2mmwfeyf5ss3ir.pdf",
+ "previewImageUrl": "https://res.cloudinary.com/dsfzvqzit/image/upload/v57070752/hzumdullmib5a2a7ed3p.jpg",
+ "userEmail": "hansrajvvs@gmail.com"
+ }
 ```
 
 ---
