@@ -31,7 +31,7 @@ This is the backend service for the [AU Exam App](https://github.com/HansrajS1/A
 ##  Installation
 
 ```bash
-git clone https://github.com/your-username/au-exam-backend.git
+git clone https://github.com/HansrajS1/Au-Exam-App-backend
 cd au-exam-backend
 ./mvnw clean install
 ```
@@ -67,7 +67,7 @@ spring.datasource.url=jdbc:postgresql://localhost:5432/au_exam
 spring.datasource.username=your_db_user
 spring.datasource.password=your_db_password
 
-appwrite.endpoint=https://cloud.appwrite.io/v1
+appwrite.endpoint=https://cloud.example.io/v1
 appwrite.projectId=your_project_id
 appwrite.apiKey=your_api_key
 ```
@@ -78,12 +78,13 @@ appwrite.apiKey=your_api_key
 
 ##  API Endpoints
 
-| Method | Endpoint             | Description                  |
-|--------|----------------------|------------------------------|
-| POST   | `/api/papers`        | Submit a new paper           |
-| GET    | `/api/papers`        | List all papers              |
-| GET    | `/api/papers/{id}`   | Get paper by ID              |
-| DELETE | `/api/papers/{id}`   | Delete paper                 |
+| Method | Endpoint                          | Description                  |
+|--------|-----------------------------------|------------------------------|
+| POST   | `/api/papers`                     | Submit a new paper           |
+| GET    | `/api/papers`                     | List all papers              |
+| GET    | `/api/papers/{id}`                | Get paper by ID              |
+| GET    | `/api/papers/search?subject=Math `| Get paper by Search          |
+| DELETE | `/api/papers/{id}`                | Delete paper                 |
 
 Example JSON payload:
 
@@ -108,39 +109,17 @@ Use Postman :
 http://localhost:8080/
 ```
 
-✅ Includes auto-generated docs from `springdoc-openapi`.
+ Includes auto-generated docs from `springdoc-openapi`.
 
 ---
 
-## 🛠️ Troubleshooting
+## Troubleshooting
 
 - **CORS errors from mobile app**  
   → Enable CORS in `WebMvcConfigurer`
 
-- **Appwrite token validation fails**  
-  → Check project ID and API key in headers
-
 - **Database connection issues**  
   → Verify JDBC URL and credentials
-
-- **File upload fails**  
-  → Ensure Appwrite bucket permissions are set correctly
-
----
-
-## 🧠 Folder Structure
-
-```
-src/
- ├── main/
- │   ├── java/com/au/exam/
- │   │   ├── controller/     # REST endpoints
- │   │   ├── service/        # Business logic
- │   │   ├── model/          # DTOs and entities
- │   │   └── config/         # CORS, security, etc.
- │   └── resources/
- │       └── application.properties
-```
 
 ---
 
