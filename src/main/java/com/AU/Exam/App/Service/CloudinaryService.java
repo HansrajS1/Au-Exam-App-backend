@@ -23,6 +23,7 @@ public class CloudinaryService {
 
     public String uploadFile(MultipartFile file) throws IOException {
         String mimeType = file.getContentType();
+        String originalFilename = file.getOriginalFilename();
         String resourceType = "auto";
 
         if (mimeType != null) {
@@ -37,6 +38,19 @@ public class CloudinaryService {
 
         Map<String, Object> options = new HashMap<>();
         options.put("resource_type", resourceType);
+        
+        if (resourceType.equals("raw") && originalFilename != null) {
+            String publicId = originalFilename.replaceAll("\\s+", "_").replaceAll("\\.[^.]+$", "");
+            options.put("public_id", "papers/" + publicId); // optional folder prefix
+
+            if (originalFilename.endsWith(".docx")) {
+                options.put("format", "docx");
+            } else if (originalFilename.endsWith(".doc")) {
+                options.put("format", "doc");
+            } else if (originalFilename.endsWith(".pdf")) {
+                options.put("format", "pdf");
+            }
+        }
 
         Map<?, ?> result = cloudinary.uploader().upload(file.getBytes(), options);
         return result.get("secure_url").toString();
