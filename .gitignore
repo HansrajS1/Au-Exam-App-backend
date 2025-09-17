@@ -14,8 +14,7 @@ hs_err_pid*
 .idea/
 *.iml
 out/
-
-readme.md
+README.md
 
 
 src/main/resources/application*.*
