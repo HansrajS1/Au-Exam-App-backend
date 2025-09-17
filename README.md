@@ -122,16 +122,6 @@ http://localhost:8080/
 
 ---
 
-## Troubleshooting
-
-- **CORS errors from mobile app**  
-  → Enable CORS in `WebMvcConfigurer`
-
-- **Database connection issues**  
-  → Verify JDBC URL and credentials
-
----
-
 ##  License
 
 MIT — feel free to fork, extend, and deploy
