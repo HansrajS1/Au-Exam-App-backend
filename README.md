@@ -128,7 +128,7 @@ http://localhost:8080/
 
 ##  License
 
-MIT — feel free to fork, extend, and deploy.
+MIT — feel free to fork, extend, and deploy
 
 ---
 
