@@ -22,9 +22,8 @@ This is the backend service for the [AU Exam App](https://github.com/HansrajS1/A
 | Framework   | Spring Boot 3.x        |
 | Hosting     | Azure                  |
 | Database    | PostgreSQL             |
-| Auth        | Appwrite JWT (optional)|
-| File Storage| Appwrite / Cloudinary  |
-| Build Tool  | Maven                  |
+| File Storage| Cloudinary             |
+| Build Tool  | Maven/Docker           |
 | Dev Tools   | Postman                |
 
 ---
@@ -67,10 +66,16 @@ Create a `.env` or use `application.properties`:
 spring.datasource.url=jdbc:postgresql://localhost:5432/au_exam
 spring.datasource.username=your_db_user
 spring.datasource.password=your_db_password
-
-appwrite.endpoint=https://cloud.example.io/v1
-appwrite.projectId=your_project_id
-appwrite.apiKey=your_api_key
+cloudinary.api_key=cloudinaryapi
+cloudinary.api_secret=api_secret
+cloudinary.cloud_name=cloud_name
+server.port=${PORT:8080}
+server.tomcat.max-http-post-size=26214400
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.servlet.multipart.max-file-size=20MB
+spring.servlet.multipart.max-request-size=25MB
 ```
 
  Use Spring’s `@Value` or `@ConfigurationProperties` to inject these.
