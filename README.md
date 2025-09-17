@@ -20,6 +20,7 @@ This is the backend service for the [AU Exam App](https://github.com/HansrajS1/A
 |-------------|------------------------|
 | Language    | Java 17+               |
 | Framework   | Spring Boot 3.x        |
+| Hosting     | Azure                  |
 | Database    | PostgreSQL             |
 | Auth        | Appwrite JWT (optional)|
 | File Storage| Appwrite / Cloudinary  |
