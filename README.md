@@ -9,7 +9,6 @@ This is the backend service for the [AU Exam App](https://github.com/HansrajS1/A
 -  Submit academic papers with subject, topic, grade/branch
 -  Upload and link preview images
 -  Retrieve papers by filters or ID
--  Secured endpoints with Appwrite token validation
 -  CORS-enabled for mobile frontend integration
 
 ---
