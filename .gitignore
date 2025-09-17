@@ -15,5 +15,7 @@ hs_err_pid*
 *.iml
 out/
 
+readme.md
+
 
 src/main/resources/application*.*
