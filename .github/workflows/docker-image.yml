@@ -15,7 +15,7 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
       - name: Build Docker image
-        run: docker build -t hansrajvvs/ac-exam-app-backend .
+        run: docker build -t hansrajvvs/au-exam-app-backend .
 
       - name: Push Docker image
-        run: docker push hansrajvvs/ac-exam-app-backend
+        run: docker push hansrajvvs/au-exam-app-backend
