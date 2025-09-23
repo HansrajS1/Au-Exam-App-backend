@@ -15,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/papers")
+@CrossOrigin(origins = {"http://localhost:5173","https://auexamweb.netlify.app"})
 public class PaperController {
 
     @Autowired
