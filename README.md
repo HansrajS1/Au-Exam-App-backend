@@ -4,6 +4,9 @@ This is the backend service for both the [AU Exam App](https://github.com/Hansra
 
 ---
 
+##  CI/CD (Git Actions with Docker)
+[![Build and Push Docker Image](https://github.com/HansrajS1/Au-Exam-App-backend/actions/workflows/docker-image.yml/badge.svg?branch=master)](https://github.com/HansrajS1/Au-Exam-App-backend/actions/workflows/docker-image.yml)
+
 ##  Features
 
 -  Submit academic papers with subject, topic, grade/branch
@@ -19,11 +22,12 @@ This is the backend service for both the [AU Exam App](https://github.com/Hansra
 |-------------|------------------------|
 | Language    | Java 17+               |
 | Framework   | Spring Boot 3.x        |
-| Hosting     | Azure                  |
 | Database    | PostgreSQL             |
 | File Storage| Cloudinary             |
 | Build Tool  | Maven/Docker           |
 | Dev Tools   | Postman                |
+| CI/CD       | Git Actions with Docker|
+
 
 ---
 
@@ -49,10 +53,11 @@ Or with Gradle:
 ./mvnw spring-boot:run
 ```
 
-Or:
+Or (cloud hosting using container):
 
 ```bash
-java -jar target/au-exam-backend.jar
+docker pull hansrajvvs/au-exam-app:latest
+docker run -p 8080:8080 hansrajvvs/au-exam-app:latest
 ```
 
 ---
