@@ -56,8 +56,8 @@ Or with Gradle:
 Or (cloud hosting using container):
 
 ```bash
-docker pull hansrajvvs/au-exam-app:latest
-docker run -p 8080:8080 hansrajvvs/au-exam-app:latest
+docker pull hansrajvvs/au-exam-app-backend:latest
+docker run -p 8080:8080 --env-file .env hansrajvvs/au-exam-app-backend 
 ```
 
 ---
