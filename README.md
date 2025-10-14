@@ -81,6 +81,27 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
 spring.servlet.multipart.max-file-size=20MB
 spring.servlet.multipart.max-request-size=25MB
 ```
+or
+
+env for docker
+
+```properties
+spring.datasource.url=jdbc:postgresql://host.docker.internal:5432/au_exam
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.datasource.username=your_db_user
+spring.datasource.password=your_db_password
+cloudinary.api_key=cloudinaryapi
+cloudinary.api_secret=api_secret
+cloudinary.cloud_name=cloud_name
+server.port=${PORT:8080}
+server.tomcat.max-http-post-size=26214400
+spring.datasource.driver-class-name=org.postgresql.Driver
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.servlet.multipart.max-file-size=20MB
+spring.servlet.multipart.max-request-size=25MB
+```
+
 
  Use Spring’s `@Value` or `@ConfigurationProperties` to inject these.
 
